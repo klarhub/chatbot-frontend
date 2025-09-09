@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-950">
+  <main class="w-full max-w-2xl mx-auto p-6">
+    <div id="inputCard" class="bg-black/40 rounded-xl p-6 shadow-lg">
+      <h1 class="text-2xl font-bold text-white mb-4">Chat with AI</h1>
+      <textarea id="contentInput" class="w-full h-40 bg-gray-900 text-gray-200 p-3 rounded-md resize-none"
+        placeholder="Type your message..."></textarea>
+      <div class="flex justify-between items-center mt-3">
+        <span id="charCount" class="text-sm text-gray-400">0 characters</span>
+        <button id="pasteButton" class="text-sm text-gray-300 px-3 py-1 rounded bg-gray-800 hover:bg-gray-700">
+          Paste
+        </button>
+      </div>
+      <div class="flex justify-end mt-4">
+        <button id="findSolutionButton" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+          Send
+        </button>
+      </div>
+    </div>
+
+    <div id="loadingSpinner" class="hidden text-center text-gray-400 mt-6">
+      <p>Thinking...</p>
+    </div>
+
+    <div id="answerCard" class="hidden bg-black/40 rounded-xl p-6 mt-6 shadow-lg">
+      <h2 class="text-lg font-semibold text-white mb-2">Response</h2>
+      <div id="answerText" class="text-gray-200 whitespace-pre-wrap"></div>
+      <div class="flex justify-end mt-4">
+        <button id="newQueryButton" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+          New Query
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
